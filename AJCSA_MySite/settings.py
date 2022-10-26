@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-(g3ixdh6z!02u3^aq)om(eq5v@06q7iac!$(nk&58zr2am#6&q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','ajcsa-system.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','ajcsa.herokuapp.com']
 
 #if DEBUG:
     #STRIPE_PUBLISHABLE_KEY = 'pk_test_51Lwgc2A5mDtifJY71J1eS8XC6BZKkRlvVFrENjDmrILwqxf0ZE05iv4InCiOvIOmD4OVi2ulBS4ojg9kEcYuuzPx00lYq54eBa'
