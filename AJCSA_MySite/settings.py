@@ -23,11 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(g3ixdh6z!02u3^aq)om(eq5v@06q7iac!$(nk&58zr2am#6&q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-if DEBUG:
-    STRIPE_PUBLISHABLE_KEY = 'pk_test_51Lwgc2A5mDtifJY71J1eS8XC6BZKkRlvVFrENjDmrILwqxf0ZE05iv4InCiOvIOmD4OVi2ulBS4ojg9kEcYuuzPx00lYq54eBa'
-    STRIPE_SECRET_KEY = 'sk_test_51Lwgc2A5mDtifJY7rULDkFsFYhLZfYK7NRQ3EGRbi9rysS0xaC9BklJYGLWnAAIXQnI5sbiTkALafsxUNtIM0D4W00YQCO83Yl'
+ALLOWED_HOSTS = ['127.0.0.1','ajcsa-system.herokuapp.com']
+
+#if DEBUG:
+    #STRIPE_PUBLISHABLE_KEY = 'pk_test_51Lwgc2A5mDtifJY71J1eS8XC6BZKkRlvVFrENjDmrILwqxf0ZE05iv4InCiOvIOmD4OVi2ulBS4ojg9kEcYuuzPx00lYq54eBa'
+    #STRIPE_SECRET_KEY = 'sk_test_51Lwgc2A5mDtifJY7rULDkFsFYhLZfYK7NRQ3EGRbi9rysS0xaC9BklJYGLWnAAIXQnI5sbiTkALafsxUNtIM0D4W00YQCO83Yl'
 
 ALLOWED_HOSTS = []
 
@@ -48,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
